@@ -92,15 +92,15 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                                 Go to home
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="profile.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                                 Profile
                             </a>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="dashboard.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                                 messages 
                             </a>

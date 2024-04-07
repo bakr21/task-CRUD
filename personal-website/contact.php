@@ -1,4 +1,6 @@
 <?php require_once './layouts/header.php'; ?>
+<?php require_once './core/function.php'; ?>
+
     <div class="d-flex flex-column">
         <main class="flex-shrink-0">
             <!-- Navigation-->
@@ -24,6 +26,13 @@
                                 <!-- to get an API token!-->
                                 <form id="contactForm" action="./controller/createmessages.php" method="POST" >
                                     <!-- Name input-->
+                                    <?php if (isset($_SESSION['success'])) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?php
+                            echo getSession('success');
+                            ?>
+                        </div>
+                        <?php endif; ?>
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="name" type="text" name="name" placeholder="Enter your name..." data-sb-validations="required" />
                                         <label for="name">Full name</label>
@@ -38,13 +47,13 @@
                                     </div>
                                     <!-- Phone number input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                        <input class="form-control" id="phone" type="tel" name="phone" placeholder="(123) 456-7890" data-sb-validations="required" />
                                         <label for="phone">Phone number</label>
                                         <!-- <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div> -->
                                     </div>
                                     <!-- Message input-->
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <textarea class="form-control" id="message" type="text" name="mess" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                         <label for="message">Message</label>
                                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                     </div>
